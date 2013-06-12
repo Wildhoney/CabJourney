@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Phing build for CabJourney. -->
+
+<project name="CabJourney" basedir="." default="all">
+    <property file="build.properties"/>
+
+    <target name="all">
+        <delete dir="${install_base}" />
+        <mkdir dir="${install_base}" />
+        <chmod file="${install_base}" mode="0777" verbose="true" />
+        <phingcall target="copy_files" />
+        <phingcall target="package" />
+        <phingcall target="clean" />
+        <phingcall target="finalise" />
+    </target>
+
+    <target name="clean">
+        <delete dir="${install_base}/libs/input" />
+        <delete dir="${install_base}/libs/lib" />
+        <delete dir="${install_base}/libs/modules" />
+        <delete dir="${install_base}/libs/output" />
+        <delete file="${install_base}/libs/README.txt" />
+        <delete file="${install_base}/libs/cleaned.png" />
+        <delete file="${install_base}/libs/points.csv" />
+        <delete file="${install_base}/libs/points-cleaned.csv" />
+    </target>
+
+    <target name="copy_files">
+        <copy todir="./${install_base}/libs">
+            <mapper type="flatten" />
+            <fileset dir=".">
+                <include name="service/" />
+                <include name="assets/" />
+                <exclude name="assets/Bootstrap.php" />
+                <include name="lib/" />
+                <include name="modules/" />
+            </fileset>
+        </copy>
+        <copy file="./Default.php" tofile="${install_base}/Default.php" overwrite="true"/>
+    </target>
+
+    <target name="package" depends="copy_files">
+        <pharpackage destfile="${phar_filename}" basedir="./" compression="gzip" stub="./Phar.php" signature="sha1">
+            <fileset dir="${install_base}">
+                <include name="**/**" />
+            </fileset>
+            <metadata>
+                <element name="version" value="0.1.0" />
+                <element name="authors">
+                    <element name="CabJourney">
+                        <element name="email" value="adam.timberlake@gmail.com" />
+                    </element>
+                </element>
+            </metadata>
+        </pharpackage>
+    </target>
+
+    <target name="finalise">
+        <copy todir="./${install_base}">
+            <fileset dir=".">
+                <include name="assets/input/**" />
+            </fileset>
+        </copy>
+        <mkdir dir="${install_base}/assets/output" />
+        <chmod file="${install_base}/assets/output" mode="0777" verbose="true" />
+        <delete dir="${install_base}/libs" />
+        <delete file="${install_base}/Default.php" />
+        <copy file="./${phar_filename}" tofile="${install_base}/${phar_filename}" overwrite="true"/>
+        <delete file="./${phar_filename}" />
+    </target>
+
+</project>
