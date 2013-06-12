@@ -56,7 +56,7 @@ Note: JavaScript doesn't have any tests, because there's nothing much to it &nda
 
 Bundled Modules
 -------------
-CabJourney comes bundled with the following modules, which each perform a unique calculation on the records. Records are filtered iteratively &ndash; ensuring simpler modules.
+`CabJourney` comes bundled with the following modules, which each perform a unique validation on each row from the CSV. Records are filtered iteratively &ndash; ensuring simpler modules.
 
 * `Chronological` &ndash; Ensures that timestamps follow chronologically;
 * `Coordination` &ndash; Ensures latitude/longitude coordinates differ;
@@ -72,7 +72,7 @@ With detailed information about the speed limit for each road, one could calcula
 
 Running
 -------------
-To run the CabJourney processor, simply invoke `Default.php` from the CLI. Please ensure that the output directory is writable (default: `assets/output/points-cleaned.csv`).
+To run the `CabJourney` processor, simply invoke `Default.php` from the CLI. Please ensure that the output directory is writable (default: `assets/output/points-cleaned.csv`).
 
 **Basic execution**
 
@@ -82,11 +82,11 @@ To run the CabJourney processor, simply invoke `Default.php` from the CLI. Pleas
 
     php Default.php --input assets/input/points.csv
 
-** Specifying the output file **
+**Specifying the output file**
 
     php Default.php --output assets/output/points-cleaned.csv
 
-** Specifying both input and output files **
+**Specifying both input and output files**
 
     php Default.php --input assets/input/points.csv  --output assets/output/points-cleaned.csv
 
@@ -105,3 +105,5 @@ Alternatively you can supply the configuration at runtime.
 For example:
 
     php Default.php --input assets/input/points.csv --output assets/output/points-cleaned.csv
+
+**Please note:** I highly recommend using the build process and execution the PHAR file instead &ndash; see **Build**.
