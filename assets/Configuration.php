@@ -3,7 +3,7 @@
 namespace CabJourney;
 
 /**
- * @class Bootstrap
+ * @class Configuration
  * @package CabJourney
  */
 class Configuration {
@@ -40,7 +40,7 @@ class Configuration {
     }
 
     /**
-     * @method getConfiguration
+     * @method getArguments
      * @param array $arguments
      * @return object {stdClass}
      * @static

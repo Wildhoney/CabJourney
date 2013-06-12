@@ -6,7 +6,7 @@ namespace CabJourney;
  * @abstract AbstractBase
  * @package CabJourney
  *
- * Responsible for enforcing the `filter` method, and centralising the business logic in the `disregardErroneous` method
+ * Responsible for enforcing the `filter` method, and centralising the filtering logic in the `disregardErroneous` method
  * for iterating over the rows, and allowing each module to decide whether to keep or remove the current row.
  */
 abstract class AbstractBase {
