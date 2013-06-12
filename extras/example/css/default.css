@@ -17,13 +17,13 @@ div.ember-view {
 
 div.ember-view div.leaflet-container {
     position: relative;
-    background: white url('./../images/568-taxi.png') no-repeat center center;
+    /*background: white url('./../images/568-taxi.png') no-repeat center center;*/
 }
 
 div.ember-view div.leaflet-container div.cab {
     border: 2px solid lightgrey;
     border-radius: 20px;
-    background: white url('./../images/568-taxi.png') no-repeat center center;
+    background: indianred url('./../images/568-taxi.png') no-repeat center center;
     background-size: 10px 10px;
     box-shadow: 0 0 5px rgba(0, 0, 0, .15);
     transition: .25s all;
@@ -33,7 +33,6 @@ div.ember-view div.leaflet-container div.cab {
 }
 
 div.ember-view div.leaflet-container div.cab:hover {
-    background-color: indianred;
     border: 2px solid white;
 }
 
@@ -50,9 +49,11 @@ div.ember-view div.leaflet-container div.leaflet-popup-content-wrapper {
 
 div.ember-view div.leaflet-container:after {
     content: "Created by Adam Timberlake";
-    background-color: rgba(0, 0, 0, .15);
+    background-color: rgba(0, 0, 0, .35);
     color: white;
     height: 25px;
+    position: absolute;
+    z-index: 101;
     line-height: 25px;
     float: left;
     padding: 0 10px 0 10px;

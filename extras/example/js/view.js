@@ -17,8 +17,9 @@ App.IndexView = Ember.View.extend({
         var map         = L.map(this.$()[0], { zoom: 14, center: [51.5148807, -0.156478266] }),
             controller  = this.get('controller');
 
-        // Add the custom tile to the map (this is a bespoke one that I created in TileMill).
-        var tilePath = 'http://a.tiles.mapbox.com/v3/wildhoney.map-r4er8ydn/{z}/{x}/{y}.png';
+        // Add the custom tile to the map..
+        var tilePath = 'http://c.tile.cloudmade.com/BC9A493B41014CAABB98F0471D759707/99016/256/{z}/{x}/{y}.png';
+//        var tilePath = 'http://a.tiles.mapbox.com/v3/wildhoney.map-r4er8ydn/{z}/{x}/{y}.png';
         L.tileLayer(tilePath).addTo(map);
 
         // Set the map instance on the controller for later.
