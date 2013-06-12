@@ -22,7 +22,7 @@ Philosophy
 * Easy to package and distribute with <a href="http://www.phing.info/" target="_blank">Phing</a>.
 
 
-Build
+Build Process
 -------------
 `CabJourney` has a build process, which creates a `PHAR` file.
 
@@ -106,4 +106,4 @@ For example:
 
     php Default.php --input assets/input/points.csv --output assets/output/points-cleaned.csv
 
-**Please note:** I highly recommend using the build process and execution the PHAR file instead &ndash; see **Build**.
+**Please note:** I highly recommend using the build process and executing the PHAR file instead &ndash; see **Build Process**.
