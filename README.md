@@ -13,28 +13,33 @@ Philosophy
 * Classes are loosely coupled;
 * Modules extend a simple abstract;
 * Each module has the same `filter` method &ndash; with the same params;
-* Business logic is abstracted to the `AbstractBase`;
+* Logic for configuring filtering is abstracted to the `AbstractBase`;
 * Modules are added to the service &ndash; allowing for dependency injection;
 * Objects are not passed around, making for easier testing and maintainability;
 * Separation of concerns, with each class having one responsibility;
 * All modules are tested using PHPUnit;
-* Has no dependencies &ndash; no Zend Framework, CodeIgniter, et cetera...
+* No dependencies &ndash; such as Zend Framework, CodeIgniter, et cetera...
+* Easy to package and distribute with <a href="http://www.phing.info/" target="_blank">Phing</a>.
 
 
 Build
 -------------
-`CabJourney` has a build process, which creates a `PHAR` file. To invoke the build process you need to:
+`CabJourney` has a build process, which creates a `PHAR` file.
+
+To invoke the build process you **must**:
 
 * Have `phing` installed using `pear install kotowicz/PharUtil-beta`;
 * Edited your `phar.readonly` option to `Off` in your php.ini file;
 
-Once you've completed the aforementioned, you can invoke the process by running the command `phing` in the application's directory.
+You may then begin the build process by running the command `phing` in the application's directory.
 
 Upon build completion, a `CabJourney.phar` archive should appear in the `dist` directory.
 
-** Running the PHAR file **
+**Running the PHAR file**
 
     php CabJourney.phar
+    php CabJourney.phar --input example.csv
+    php CabJourney.phar --input example.csv --output cleaned-example.csv
 
 
 Validation
