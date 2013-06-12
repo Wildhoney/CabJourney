@@ -15,9 +15,10 @@ Philosophy
 * Each module has the same `filter` method &ndash; with the same params;
 * Business logic is abstracted to the `AbstractBase`;
 * Modules are added to the service &ndash; allowing for dependency injection;
-* Objects are not passed around, making for easier testing, and comprehension;
-* Each class has one responsibility;
+* Objects are not passed around, making for easier testing and maintainability;
+* Separation of concerns, with each class having one responsibility;
 * All modules are tested using PHPUnit;
+* Has no dependencies &ndash; no Zend Framework, CodeIgniter, et cetera...
 
 
 Build
@@ -50,7 +51,7 @@ Note: JavaScript doesn't have any tests, because there's nothing much to it &nda
 
 Bundled Modules
 -------------
-CabJourney comes bundled with the following modules, which each perform a unique calculation on the records. Records are filtered iteratively &ndash; ensuring simpler modules (composite pattern).
+CabJourney comes bundled with the following modules, which each perform a unique calculation on the records. Records are filtered iteratively &ndash; ensuring simpler modules.
 
 * `Chronological` &ndash; Ensures that timestamps follow chronologically;
 * `Coordination` &ndash; Ensures latitude/longitude coordinates differ;

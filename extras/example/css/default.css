@@ -17,7 +17,6 @@ div.ember-view {
 
 div.ember-view div.leaflet-container {
     position: relative;
-    /*background: white url('./../images/568-taxi.png') no-repeat center center;*/
 }
 
 div.ember-view div.leaflet-container div.cab {
