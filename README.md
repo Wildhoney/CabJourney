@@ -51,7 +51,7 @@ Testing
 -------------
 * PHP tests are written in PHPUnit (navigate to `/tests`);
 
-Note: JavaScript doesn't have any tests, because there's nothing much to it &ndash; and *very* little business logic. However, you can run JSHint on the files with: `grunt jshint`.
+Note: JavaScript doesn't have any tests, because there's nothing much to it &ndash; with *very* minimal logic. However, you can run JSHint on the files with: `grunt jshint` (requires `npm`).
 
 
 Bundled Modules
