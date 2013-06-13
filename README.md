@@ -33,7 +33,7 @@ To invoke the build process you **must**:
 
 You may then begin the build process by running the command `phing` in the application's directory.
 
-Upon build completion, a `CabJourney.phar` archive should appear in the `dist` directory.
+Upon build completion, a `CabJourney.phar` archive *should* appear in the `dist` directory.
 
 **Running the PHAR file**
 
