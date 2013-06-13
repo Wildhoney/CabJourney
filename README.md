@@ -13,7 +13,7 @@ Philosophy
 * Classes are loosely coupled;
 * Modules extend a simple abstract;
 * Each module has the same `filter` method &ndash; with the same params;
-* Logic for configuring filtering is abstracted to the `AbstractBase`;
+* Logic for the filtering is abstracted to the `AbstractBase`;
 * Modules are added to the service &ndash; allowing for dependency injection;
 * Objects are not passed around, making for easier testing and maintainability;
 * Separation of concerns, with each class having one responsibility;
