@@ -22,7 +22,7 @@ abstract class AbstractBase {
     abstract function filter($currentRow, $previousRow, $nextRow);
 
     /**
-     * @disregardErroneous
+     * @method disregardErroneous
      * @param array $rows
      * @param string [$name = null]
      * @return array
