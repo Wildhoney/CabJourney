@@ -28,7 +28,7 @@ Build Process
 
 To invoke the build process you **must**:
 
-* Have `phing` installed using `pear install kotowicz/PharUtil-beta`;
+* Have `phing` installed using `pear install phing/phing`;
 * Edited your `phar.readonly` option to `Off` in your php.ini file;
 
 You may then begin the build process by running the command `phing` in the application's directory.
